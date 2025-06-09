@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.receipt {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.bitcoin-logo {
+    background-color: #00acee;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0 auto 10px;
+    color: #fff;
+    font-family: Arial, 'Segoe UI Symbol', sans-serif;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#bitcoin-address {
+    font-size: 0.9rem;
+    color: #aaa;
+    word-wrap: break-word;
+}
+
+.amount-section {
+    margin-bottom: 40px;
+}
+
+#bitcoin-amount {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#usd-amount {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+#timestamp {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.status-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00acee; /* Default for Completed */
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1rem;
+    width: 200px;
+    margin: 0 auto 20px;
+}
+
+.status-section.completed {
+    background-color: #00acee; /* Blue for Completed */
+}
+
+.status-section.pending {
+    background-color: #f0ad4e; /* Yellow for Pending */
+}
+
+.status-section.failed {
+    background-color: #d9534f; /* Red for Failed */
+}
+
+.status-icon {
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin: 20px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #00acee;
+}
+
+button:not(.status-section) {
+    width: 100%;
+    padding: 10px;
+    background-color: #00acee;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:not(.status-section):hover {
+    background-color: #0091d1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    #bitcoin-amount {
+        font-size: 1.8rem;
+    }
+
+    #usd-amount {
+        font-size: 1rem;
+    }
+
+    .status-section {
+        width: 180px;
+        font-size: 0.9rem;
+    }
+}
