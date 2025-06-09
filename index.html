@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    …
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Withdrawal Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="receipt" id="receipt">
+            <div class="header">
+                <div class="bitcoin-logo">₿</div>
+                <h1>Bitcoin Withdrawal</h1>
+                <p id="bitcoin-address">Input Bitcoin Address Here</p>
+            </div>
+            <div class="amount-section">
+                <p id="bitcoin-amount">0.00000000 BTC</p>
+                <p id="usd-amount">$0.00 USD</p>
+                <p id="timestamp">May 31, 2025 at 10:39 AM WAT</p>
+            </div>
+            <div class="status-section">
+                <span id="status-icon" class="status-icon">✓</span>
+                <span id="status-text">Completed</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input-address">Set Bitcoin Address</label>
+            <input type="text" id="input-address" placeholder="Enter Bitcoin Address">
+        </div>
+        <div class="form-group">
+            <label for="input-amount-btc">Set Amount (BTC)</label>
+            <input type="number" id="input-amount-btc" placeholder="Enter amount in BTC" step="0.00000001">
+        </div>
+        <div class="form-group">
+            <label for="input-amount-usd">Set Amount (USD)</label>
+            <input type="number" id="input-amount-usd" placeholder="Enter amount in USD" step="0.01">
+        </div>
+        <div class="form-group">
+            <label for="input-timestamp">Set Timestamp</label>
+            <input type="text" id="input-timestamp" value="May 31, 2025 at 10:39 AM WAT" placeholder="e.g., May 31, 2025 at 10:39 AM WAT">
+        </div>
+        <div class="form-group">
+            <label for="input-status">Set Status</label>
+            <select id="input-status" onchange="updateStatus()">
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+                <option value="failed">Failed</option>
+            </select>
+        </div>
+        <button onclick="updatePayment()">Update Payment Details</button>
+        <button onclick="downloadReceipt()" style="margin-top: 10px;">Generate Receipt</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
